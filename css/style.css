@@ -64,7 +64,7 @@
 }
 
 #pid-form {
-	margin: 25px 0;
+	margin: 25px 0!important;
 	color: green;
 	font-weight: bold;
 }
