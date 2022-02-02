@@ -193,31 +193,12 @@ flowers.selectAll('path')
         return 'translate(' + [cx, cy] +
             ')rotate(' + [d.angle] + ')';
     })
-   
 
+ 
+   
 var stories_clicked = [];
 // function to select and deselect story
 function animate(d, selected_flower) {
-
-// const circle = selected_flower.querySelector('circle');
-// const path = selected_flower.querySelector('path');
-// $("#metaphoric_viz svg").click(function(event) { 
-//     var target = $(event.target);
-//     console.log(target)
-//     if (!(event.target === circle) && !circle.contains(event.target)) {
-//         console.log('Click outside');
-//       } else {
-//        console.log('Click inside');
-//       }   
-//   });
-
-
-    if (d3.select(selected_flower).classed("selected")) {
-        d3.selectAll('.selected').classed('selected', false)
-        d3.selectAll('.flower').style('opacity', 1)
-        $('#d3-tip span').remove();
-
-    } else {
         tip.show(d);
         if ($('#story_clicked_ids').val() == " ") {
             stories_clicked.length = 0;
@@ -228,8 +209,9 @@ function animate(d, selected_flower) {
         d3.selectAll('.selected').classed('selected', false)
         d3.select(selected_flower).classed("selected", true)
         d3.selectAll('.flower').style('opacity', .2)
-    }
+    
 }
+
 
 flowers.append("circle") // attach a circle
     .classed("flower-center", true)
@@ -456,8 +438,18 @@ function setupButtons() {
 
 setupButtons()
 
-
-
+document.addEventListener("click", function(event) {
+    const svg = document.querySelector('svg.main_svg');
+            if (event.target === svg) {
+            $(".flower").removeClass("selected");
+            $('.flower').attr('style','opacity: 1');
+            $('#d3-tip span').remove();
+               }
+            
+});
 
  
 }
+
+
+

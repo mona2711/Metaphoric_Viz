@@ -1,8 +1,8 @@
 $(function() {
 
-    $('#part-A-container').hide()
-    $('#part-B-container').show()
-    $('#part-C-container').hide()
+    // $('#part-A-container').hide()
+    // $('#part-B-container').show()
+    // $('#part-C-container').hide()
 
     function timestamp(timestamp_ID) {
         var today = new Date();
