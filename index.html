@@ -36,7 +36,7 @@
                   <input type="hidden" id="timestamp_A" name="Timestamp_B" />
 
                   <label for="pid">Prolofic ID</label>
-                  <input type="text" id="pid" placeholder="Prolofic id" name="Prolofic_id" readonly style="background-color:lightgray; width:200px;" required>
+                  <input type="text" id="pid" placeholder="Prolofic id" name="Prolofic_id" readonly style="background-color:lightgray; width:200px;margin:5px 0;" required>
                </div>
                <div class="col-sm-12 " id="demographic_form">
                   <div id="age_wrapper"></div>
@@ -85,7 +85,7 @@
                <div class="align_center">
                   <h5 style="display:inline-block;font-weight:bold;" class="align-center;">How to Read it</h5>
                   <button type="button" class="about-button" data-toggle="modal" data-target="#overview-modal"> ? </button>
-                  <img class="legend_img" src="image/m_legend.svg" alt="legend" width="" height="570px" />
+                  <img class="legend_img" src="image/m_legend.svg" alt="legend" width="" height="565px" />
                </div>
             </div>
             <form action="" id="viz_tasks" name="submit-to-google-sheet_B0">
@@ -131,11 +131,11 @@
                         <div class="form-check-inline viz_task_wrapper " style = width:45%;>
                            <span class = "bold" style = "margin-left:3px;">Harraser had</span>
                            <input type="radio" id="quest3_op1" name="viz_question3" value=" Position" required>
-                           <label for="quest3_op1">Lower Position</label>
+                           <label for="quest3_op1">a lower position</label>
                            <input type="radio" id="quest3_op2" name="viz_question3" value="Equal Position" required>
-                           <label for="quest3_op2">Equal Position</label>
+                           <label for="quest3_op2">equal position</label>
                            <input type="radio" id="quest3_op2" name="viz_question3" value="Higher Position" required>
-                           <label for="quest3_op2">Higher Position</label>
+                           <label for="quest3_op2">a higher position</label>
                            <div class="" style = "display:inline-block; float:right;" >
                               <button type="submit" id="Part_B0_submit" class=" btn btn-success" data-toggle="modal">submit</button>
                               <span id="error-msg_B0" class="important" style="display:none;"> Please fill all fields.</span>
@@ -163,7 +163,7 @@
                   <textarea id="viz_fact_learned" name="viz_fact_learned" rows="5" cols="50" required></textarea>
                </div>
                <div class="main-form-submit align_center">
-                  <button type="submit" id="Part_B_submit" class=" btn btn-success">I am done with visualization</button>
+                  <button type="submit" id="Part_B_submit" class=" btn btn-success">I am done with the visualization</button>
                   <span id="error-msg_B1" class="important" style="display:none;"> Please fill what you learned during visualization exploration.</span>
                </div>
             </form>
@@ -224,7 +224,7 @@
                            <img class="" src="image/modal_legend1.svg" alt="example1" width="420px" height="" />
                            <img class="" src="image/modal_legend2.svg" alt="example2" width="145px" height="" />
                         </div>
-                        <h6 style="padding:0 100px; font-weight:700;">Example - This representation corresponds to an incident where  an undergraduate student studying in the academic discipline “Humanities” was Harassed by a staff of gender “Other”.
+                        <h6 style="padding:0 100px; font-weight:700;">Example - This representation corresponds to an incident where  an undergraduate student studying in the academic discipline “Humanities” was harassed by a staff of gender “Other”.
                            The relatively large size of the representation means that the victim has reported the incident with many details. These details can be seen by clicking on any of the flower petals.
                         </h6>
                         <p><i>Note - The Harasser's gender is known, but the victim's gender is not explicitly known. A victim might have chosen to reveal the gender of the harasser in the incident description or not.
@@ -237,8 +237,7 @@
                         <h4 class= "align_center" style = "color:blue;margin-top:20px;">Learn how to interact with the visualization</h4>
                         <ul>
                            <li>
-                              By clicking on the flower, you will see details of the incident the victim reported on the left-hand-side panel of the interface. To exit the details mode, click again on the story you had selected.
-                              <p style="margin:0;"> <i style="font-weight:normal;"> Note -  Click on the petals of the flowers, not the circle, to reveal the details about the incident.</i></p>
+                              By clicking on an incident (circle or flower), you will see details of the incident the victim reported on the left-hand-side panel of the interface. To exit the details mode, click again on the story you had selected.
                            </li>
                            <li>Use the grey buttons at the top of the visualization to group the visualization by victim discipline, victim rank, harasser rank, harasser type, and institute type. </li>
                            <li>To reset the visualization, click on the Reset button at the top of the visualization. </li>
@@ -263,7 +262,7 @@
                      </button>
                   </div>
                   <div class="modal-body">
-                     <p>Let's continue exploring the visualization. Please spend <strong> 8-10 minutes </strong> interacting with the  visualization in any way you like. 
+                     <p>Let's continue exploring the visualization. Please spend <strong> several minutes </strong> interacting with the  visualization in any way you like. 
                         Let us know what you learn or what interesting pattern you discover while interacting with the visualization, by typing these in the text box below the visualization.
                      </p>
                      <p>Remember that you can compare reported incidents of sexual harassment by grouping the incidents based on <strong> academic disciplines, institute types, Victim Rank, Harasser Rank, 

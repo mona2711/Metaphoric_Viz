@@ -13,6 +13,7 @@ height = 545;
 
 // append the svg object to the body of the page, appends a 'group' element to 'svg', moves the 'group' element to the top left margin
 var metaphoric_svg = d3.select("#metaphoric_viz").append("svg")
+.classed("main_svg",true)
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
@@ -101,6 +102,10 @@ var linearScale = d3.scaleLinear()
 var flowers = metaphoric_svg.selectAll('g.flower')
     .data(data).enter().append('g')
     .classed('flower', true)
+    .on("click", function(d) {
+        var selected_flower = this;
+        animate(d, selected_flower);
+    })
 
 var perp = flowers.append("circle")
     .attr("class", "harasser")
@@ -133,9 +138,6 @@ var perp = flowers.append("circle")
     })
 
     .attr("stroke", function(d) {
-        // if (d.id == "22") {
-        //     return "#39FF14"
-        // }
         if (d.gendersquash == "Female") {
             return '#000'
         }
@@ -191,15 +193,25 @@ flowers.selectAll('path')
         return 'translate(' + [cx, cy] +
             ')rotate(' + [d.angle] + ')';
     })
-    .on("click", function(d) {
-        var selected_flower = this.parentNode;
-        animate(d, selected_flower);
-    })
+   
 
 var stories_clicked = [];
-
 // function to select and deselect story
 function animate(d, selected_flower) {
+
+// const circle = selected_flower.querySelector('circle');
+// const path = selected_flower.querySelector('path');
+// $("#metaphoric_viz svg").click(function(event) { 
+//     var target = $(event.target);
+//     console.log(target)
+//     if (!(event.target === circle) && !circle.contains(event.target)) {
+//         console.log('Click outside');
+//       } else {
+//        console.log('Click inside');
+//       }   
+//   });
+
+
     if (d3.select(selected_flower).classed("selected")) {
         d3.selectAll('.selected').classed('selected', false)
         d3.selectAll('.flower').style('opacity', 1)
@@ -443,4 +455,9 @@ function setupButtons() {
 }
 
 setupButtons()
+
+
+
+
+ 
 }
