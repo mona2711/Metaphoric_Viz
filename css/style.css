@@ -64,9 +64,13 @@
 }
 
 #pid-form {
-	margin: 10px 0;
+	margin: 25px 0;
 	color: green;
 	font-weight: bold;
+}
+
+.general_instructions{
+margin-top:20px;
 }
 
 #part_A_pid input {
