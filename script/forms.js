@@ -82,6 +82,7 @@ function make_demographic_form() {
 function make_eng_form() {
 
     var eng_scale = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+
     var eng_questions = [
         "While using this interactive visualization, I found its look and feel to be pleasing.",
         "The layout of this interactive visualization is clear and balanced.",
@@ -118,7 +119,8 @@ function make_eng_form() {
                     type: 'radio',
                     id: 'eng_question1_option' + j,
                     name: 'eng_question' + i,
-                    value: eng_scale[j - 1],
+                    // value: eng_scale[j - 1],
+                    value:j,
                     class: 'form-check-input',
                     checked: 'true',
                     required: 'true'
@@ -180,7 +182,8 @@ function make_empathy_form(form, type) {
                     type: 'radio',
                     id: type + 'empathy_question1_option' + j,
                     name: type + 'empathy_question' + i,
-                    value: empathy_scale[j - 1],
+                    value:j,
+                    // value: empathy_scale[j - 1],
                     class: 'form-check-input',
                     checked: 'checked',
                     required: 'true'
