@@ -64,7 +64,8 @@ $(function() {
 
             if (SheetName == 'Study_Part_B_interactions') {
                 var val = form.elements.viz_fact_learned.value;
-                if (/^\s*$/g.test(val) || val.indexOf('\n') != -1) {
+                // if (/^\s*$/g.test(val) || val.indexOf('\n') != -1) {
+                    if(val.trim().length < 10){
                     isFormValid = false;
                     $(error).show()
                 }

@@ -79,6 +79,9 @@ var colors_scale = d3.scaleOrdinal()
 
 d3.csv("https://raw.githubusercontent.com/mona2711/Data/master/sample_main%20(1).csv").then(data => {
 data.forEach(function(d, i) {
+    if(d.itype == "Multiple"){
+        d.itype = "More Than One Institution"
+    }
     d.id = i;
     d.radius = 26;
 })
@@ -403,7 +406,7 @@ else{
                 return '550px'
             }
          
-            else if (d == "Multiple"){
+            else if (d == "More Than One Institution"){
                 return '710px'
             }
             else{

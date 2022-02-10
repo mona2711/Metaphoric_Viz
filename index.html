@@ -90,7 +90,8 @@
             </div>
             <form action="" id="viz_tasks" name="submit-to-google-sheet_B0">
                <div id="viz_questions">
-                  <h5 class="text-center help-msg">Please answer the following questions by interacting with the visualization.</h5>
+                  <h5 class="text-center help-msg">Please answer the following questions by using the <span style = "color:black;font-weight: bold;">grey buttons</span> on the top to group incidents and clicking on incidents if needed.
+                  </h5>
                   <input type="hidden" id="timestamp_B_0_entry" name="Timestamp_A" />
                   <input type="hidden" id="timestamp_B_0" name="Timestamp_B" />
                   <input type="hidden" id="pid_B" name="Prolofic_id" required />
@@ -123,7 +124,7 @@
                            <input type="radio" id="quest2_op4" name="viz_question2" value="Formal Sciences" required>
                            <label for="quest2_op4">Formal Sciences</label>
                            <input type="radio" id="quest2_op5" name="viz_question2" value="Applied Sciences" required>
-                           <label for="quest2_op4">Applied Sciences</label>
+                           <label for="quest2_op5">Applied Sciences</label>
                         </div>
                      </li>
                      <li>
@@ -134,8 +135,8 @@
                            <label for="quest3_op1">a lower position</label>
                            <input type="radio" id="quest3_op2" name="viz_question3" value="Equal Position" required>
                            <label for="quest3_op2">equal position</label>
-                           <input type="radio" id="quest3_op2" name="viz_question3" value="Higher Position" required>
-                           <label for="quest3_op2">a higher position</label>
+                           <input type="radio" id="quest3_op3" name="viz_question3" value="Higher Position" required>
+                           <label for="quest3_op3">a higher position</label>
                            <div class="" style = "display:inline-block; float:right;" >
                               <button type="submit" id="Part_B0_submit" class=" btn btn-success" data-toggle="modal">submit</button>
                               <span id="error-msg_B0" class="important" style="display:none;"> Please fill all fields.</span>
@@ -227,7 +228,7 @@
                         <h6 style="padding:0 100px; font-weight:700;">Example - This representation corresponds to an incident where  an undergraduate student studying in the academic discipline “Humanities” was harassed by a staff of gender “Other”.
                            The relatively large size of the representation means that the victim has reported the incident with many details. These details can be seen by clicking on any of the flower petals.
                         </h6>
-                        <p><i>Note - The Harasser's gender is known, but the victim's gender is not explicitly known. A victim might have chosen to reveal the gender of the harasser in the incident description or not.
+                        <p><i>Note - The Harasser's gender is known, but the victim's gender is not explicitly known. A victim might have chosen to reveal their gender in the incident description or not.
                            </i>
                         </p>
                         <p>The right-hand side panel of the interface shows the complete legend for reading the visualization.

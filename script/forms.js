@@ -117,17 +117,17 @@ function make_eng_form() {
             $("#eng_op_wrapper" + i).append(
                 $('<input>').prop({
                     type: 'radio',
-                    id: 'eng_question1_option' + j,
+                    id: i + 'eng_question1_option' + j,
                     name: 'eng_question' + i,
                     // value: eng_scale[j - 1],
                     value:j,
                     class: 'form-check-input',
-                    // checked: 'true',
+                    checked: 'true',
                     required: 'true'
                 })
             ).append(
                 $('<label>').prop({
-                    for: 'eng_question1_option' + j
+                    for: i + 'eng_question1_option' + j
                 }).html(eng_scale[j - 1])
             )
         }
@@ -150,7 +150,7 @@ function make_empathy_form(form, type) {
         "If someone is upset, I get upset too.",
         "When I am with other people who are laughing, I join in.",
         "It makes me mad to see someone treated unjustly.",
-        "I rarely take notice when people treat each other warmly.",
+        "I rarely notice when people treat each other warmly.",
         "I feel happy when I see people laughing and enjoying themselves.",
         "It is easy for me to get carried away by other people's emotions.",
         "My feelings are my own and don't reflect how others feel.",
@@ -180,17 +180,17 @@ function make_empathy_form(form, type) {
             $("#" + type + "emp_op_wrapper" + i).append(
                 $('<input>').prop({
                     type: 'radio',
-                    id: type + 'empathy_question1_option' + j,
+                    id: type + i + 'empathy_question1_option' + j,
                     name: type + 'empathy_question' + i,
                     value:j,
                     // value: empathy_scale[j - 1],
                     class: 'form-check-input',
-                    // checked: 'checked',
+                    checked: 'checked',
                     required: 'true'
                 })
             ).append(
                 $('<label>').prop({
-                    for: type + 'empathy_question1_option' + j
+                    for: type + i +  'empathy_question1_option' + j
                 }).html(empathy_scale[j - 1])
             )
         }
