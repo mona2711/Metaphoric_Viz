@@ -9,7 +9,7 @@ var margin = {
 },
 
 width = 940;
-height = 545;
+height = 530;
 
 // append the svg object to the body of the page, appends a 'group' element to 'svg', moves the 'group' element to the top left margin
 var metaphoric_svg = d3.select("#metaphoric_viz").append("svg")
@@ -71,6 +71,10 @@ var petalPaths = [
 ]
 ];
 
+var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
+
 
 //different scales 
 var colors_scale = d3.scaleOrdinal()
@@ -95,6 +99,11 @@ function main(data) {
 // data.sort(function(a, b) {
 //     return status_list.indexOf(a.perpetrator_new) - status_list.indexOf(b.perpetrator_new)
 // })
+
+// Define the div for the tooltip
+
+
+
 var linearScale = d3.scaleLinear()
     .domain([
         d3.min(data, d => d.story_word_count),
@@ -109,6 +118,23 @@ var flowers = metaphoric_svg.selectAll('g.flower')
         var selected_flower = this;
         animate(d, selected_flower);
     })
+    .on("mouseover", function(d) {		
+        div.transition()		
+            .duration(200)		
+            .style("opacity", .9);		
+        div.html("<strong>" + "Harasser:"+ "</strong>" + d.perpetrator_new +"</br>" 
+        + "<strong>" + "Harraser Gender:" + "</strong>" +d.gendersquash + "</br>" 
+        + "<strong>" + "Victim:" + "</strong>" + d.cleantarget_new + "</br>" 
+        + "<strong>" + "Victim's Field of study:" + "</strong>" + d.cleandiscipline_new + "</br>" 
+        + "<strong>" + "Victim's Institute Type: " + "</strong>" + d.itype )	
+            .style("left", (d3.event.pageX) + "px")		
+            .style("top", (d3.event.pageY - 28) + "px");	
+        })					
+    .on("mouseout", function(d) {		
+        div.transition()		
+            .duration(500)		
+            .style("opacity", 0);	
+    });
 
 var perp = flowers.append("circle")
     .attr("class", "harasser")
@@ -152,6 +178,8 @@ var perp = flowers.append("circle")
         }
     })
 
+  
+
 flowers.selectAll('path')
     .data(function(d) {
         var numPetals = Math.floor(Math.random() * (8 - 5 + 1) + 5);
@@ -177,7 +205,8 @@ flowers.selectAll('path')
                 path: path,
                 color: Tcolor,
                 id: d.id,
-                event: d.event
+                event: d.event,
+                victim:d.cleantarget_new
             }
         });
     }).enter().append('path')
@@ -196,8 +225,9 @@ flowers.selectAll('path')
         return 'translate(' + [cx, cy] +
             ')rotate(' + [d.angle] + ')';
     })
-
  
+
+    
    
 var stories_clicked = [];
 // function to select and deselect story
@@ -413,7 +443,7 @@ else{
             return scale(d);
             }
         })
-        .attr('y', 595)
+        .attr('y', 585)
         .attr('font-size', '10px')
         .attr('font-weight', 'bold')
         .attr('text-anchor', 'middle')

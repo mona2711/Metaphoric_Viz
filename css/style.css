@@ -48,8 +48,8 @@
 }
 
 #BtnContainer button {
-	padding: 5px;
-	min-width: 122px;
+	padding: 5px 8px;
+    min-width: 80px;
 	font-weight: 500px;
 	margin-right: 10px;
 }
@@ -225,7 +225,7 @@ input[type=radio] {
 }
 
 #victim_story {
-	height: 595px;
+	height: 588px;
 	padding: 0;
 	border-right: 1px solid lightgrey;
 	overflow: scroll;
@@ -233,7 +233,7 @@ input[type=radio] {
 }
 
 #legend {
-	height: 595px;
+	height: 588px;
 	padding: 0;
 	border-left: 1px solid lightgrey;
 }
@@ -301,7 +301,7 @@ input:focus {
 
 .modal-header,
 .modal-footer {
-	padding: 8px;
+	padding: 6px;
 }
 
 .modal-body {
@@ -329,4 +329,15 @@ input:focus {
 
 #part-C-container{
 	margin-top:15px;
+}
+
+
+div.tooltip {	
+    position: absolute;	
+    padding: 10px;				
+    font: 12px sans-serif;		
+    background: lightgray;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
 }

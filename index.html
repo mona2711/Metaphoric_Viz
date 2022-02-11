@@ -35,7 +35,7 @@
                   <input type="hidden" id="timestamp_A_1_entry" name="Timestamp_A" />
                   <input type="hidden" id="timestamp_A" name="Timestamp_B" />
 
-                  <label for="pid">Prolofic ID</label>
+                  <label for="pid">Your Prolofic ID is : </label>
                   <input type="text" id="pid" placeholder="Prolofic id" name="Prolofic_id" readonly style="background-color:lightgray; width:200px;margin:5px 0;" required>
                </div>
                <div class="col-sm-12 " id="demographic_form">
@@ -72,8 +72,8 @@
                      <button class="btn button" id="cleantarget_new" value=0 onclick="count_clicks(id)"> Victim Rank</button>
                      <button class="btn button" id="perpetrator_new" value=0 onclick="count_clicks(id)"> Harasser Rank</button>
                      <button class="btn button" id="gendersquash" value=0 onclick="count_clicks(id)"> Harasser Gender</button>
-                     <button class="btn button" id="itype" value=0 onclick="count_clicks(id)">Institution Type</button>
-                     <button class="btn button" id="cleandiscipline_new" value=0 onclick="count_clicks(id)">Victim Discipline</button>
+                     <button class="btn button" id="itype" value=0 onclick="count_clicks(id)">Victim Institution Type</button>
+                     <button class="btn button" id="cleandiscipline_new" value=0 onclick="count_clicks(id)">Victim Field of Study</button>
                   </div>
                   <div class="rest" style="display:inline-block; float:right;">
                      <button class="btn button active" id="all" value=0 onclick="count_clicks(id)"> Reset</button>
@@ -212,15 +212,12 @@
                      <p> 
                         You are about to view an interactive visualization, which sheds light on the issue of sexual harassment in academia.
                         The visualization shows a subset of the dataset collected through an anonymous online survey “Sexual Harassment in the Academy”. 
-                        Thanks to <a href = "https://theprofessorisin.com/about-the-professor-2/" class= "bold" target = "_blank">Dr. Karen Kelsky </a>, 
-                        for starting the survey that gives victims of sexual harassment in academia a space to voluntarily report their assault/incident. 
-                        More than 2000 testimonies have been collected since the launch of the survey in late 2017. This data is highly personal and sensitive. 
-                        The online survey is now closed and the collected data can be found at - <a class= "bold" href = "https://docs.google.com/forms/d/e/1FAIpQLSeqWdpDxVRc-i8OiiClJPluIpjMlM41aUlU2E0rrQ4br_rQmA/viewform?fbzx=-8824260385585057501" target = "_blank">anonymous, Sexual Harassment in the Academy survey.</a>
-                        The data includes incident details reported by the victim and other information like the rank of the victim and harasser, the victim’s academic discipline, institute type, 
-                        the gender of the harasser, and other details.
+                        Thanks to <strong> Dr. Karen Kelsky </strong>, for starting the survey that gives victims of sexual harassment in academia a space to voluntarily report their assault/incident. 
+                        More than 2000 testimonies have been collected since the launch of the survey in late 2017. The dataset includes information like description of incident, rank of the victim and harasser, victim’s field of study, victim's institute type, 
+                         gender of the harasser, and other details. This data is highly personal and sensitive.
                      </p>
-                     <div class="legend-part">
-                        <h4 class= "align_center" style = "margin-bottom:0;top:12px;position:relative;color:blue;"> Learn how to read the visualization</h4>
+                     <div class="legend-part" style = "position:relative;top:-6px;">
+                        <h4 class= "align_center" style = "margin-bottom:-6px;position:relative;color:blue;"> Learn how to read the visualization</h4>
                         <div class="align_center">
                            <img class="" src="image/modal_legend1.svg" alt="example1" width="420px" height="" />
                            <img class="" src="image/modal_legend2.svg" alt="example2" width="145px" height="" />
@@ -235,10 +232,13 @@
                         </p>
                      </div>
                      <div class="interaction-part">
-                        <h4 class= "align_center" style = "color:blue;margin-top:20px;">Learn how to interact with the visualization</h4>
+                        <h4 class= "align_center" style = "color:blue;margin-top:15px;">Learn how to interact with the visualization</h4>
                         <ul>
                            <li>
                               By clicking on an incident (circle or flower), you will see details of the incident the victim reported on the left-hand-side panel of the interface. To exit the details mode, click anywhere on the white screen near incidents/circles.
+                           </li>
+                           <li>
+                              Hover anywhere on an incident (circle or flower) to see the key details.
                            </li>
                            </li>
                            <li>Use the grey buttons at the top of the visualization to group the visualization by victim discipline, victim rank, harasser rank, harasser type, and institute type. </li>
@@ -264,8 +264,9 @@
                      </button>
                   </div>
                   <div class="modal-body">
-                     <p>Let's continue exploring the visualization. Please spend <strong> several minutes </strong> interacting with the  visualization in any way you like. 
-                        Let us know what you learn or what interesting pattern you discover while interacting with the visualization, by typing these in the text box below the visualization.
+                     <p>Let's continue exploring the visualization. Please spend <strong> a few minutes </strong> interacting with the  visualization in any way you like. 
+                        Keep typing your findings in the text box below the visualization side by side. Let us know what you learn or what interesting pattern you discover while interacting with the visualization.
+                        Let us know what you learn or what interesting pattern you discover while interacting with the visualization.
                      </p>
                      <p>Remember that you can compare reported incidents of sexual harassment by grouping the incidents based on <strong> academic disciplines, institute types, Victim Rank, Harasser Rank, 
                         and Harasser gender </strong> using the gray buttons at the top. You can also click on an incident (circle or flower) to view the details of the reported incident on the left-hand-side panel of the visualization.
