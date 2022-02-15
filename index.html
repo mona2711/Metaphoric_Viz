@@ -31,6 +31,8 @@
             </form>
             <!--Demographic and empathy form-->
             <form action="" id="Part_A_forms" name="submit-to-google-sheet_A">
+               <div id = "demographic_ques">
+
                <div id="part_A_pid" class="align_center help-msg">
                   <input type="hidden" id="timestamp_A_1_entry" name="Timestamp_A" />
                   <input type="hidden" id="timestamp_A" name="Timestamp_B" />
@@ -42,13 +44,15 @@
                   <div id="age_wrapper"></div>
                   <div id="education_wrapper"></div>
                   <div id="discipline_wrapper"></div>
+                  </div>
+               </div>
+
                   <h5 class="text-center help-msg">Please indicate the extent to which you agree with the following statements.</h5>
                   <div class="col-sm-12 ">
                      <div class="empathy_form_container " id="pre_empathy_form">
                         <ol id="empathy_form_list"></ol>
                      </div>
                   </div>
-               </div>
                <p class="important align_center">Before you click submit , please recheck your Prolific ID at the top of the page <a href="#pid-form">
                   <button type="button" class=" up  btn-sm">
                   <span class="glyphicon glyphicon-circle-arrow-up"></span> Up </button>
@@ -85,7 +89,7 @@
                <div class="align_center">
                   <h5 style="display:inline-block;font-weight:bold;" class="align-center;">How to Read it</h5>
                   <button type="button" class="about-button" data-toggle="modal" data-target="#overview-modal"> ? </button>
-                  <img class="legend_img" src="image/m_legend.svg" alt="legend" width="" height="565px" />
+                  <img class="legend_img" src="image/m_legend.svg" alt="legend" width="" height="520px" />
                </div>
             </div>
             <form action="" id="viz_tasks" name="submit-to-google-sheet_B0">
@@ -112,7 +116,7 @@
                         </div>
                      </li>
                      <li>
-                        <p>Victims in the following <strong>academic disciplines</strong> reported the second highest number of incidents:
+                        <p>Victims in the following <strong>field of study</strong> reported the second highest number of incidents:
                         </p>
                         <div class="form-check-inline viz_task_wrapper">
                            <input type="radio" id="quest2_op1" name="viz_question2" value="Humanities" required>
@@ -222,7 +226,7 @@
                            <img class="" src="image/modal_legend1.svg" alt="example1" width="420px" height="" />
                            <img class="" src="image/modal_legend2.svg" alt="example2" width="145px" height="" />
                         </div>
-                        <h6 style="padding:0 100px; font-weight:700;margin-top:0;">Example - This representation corresponds to an incident where  an undergraduate student studying in the academic discipline “Humanities” was harassed by a staff of gender “Other”.
+                        <h6 style="padding:0 100px; font-weight:700;margin-top:0;">Example - This representation corresponds to an incident where  an undergraduate student studying in the field of study “Humanities” was harassed by a staff of gender “Other”.
                            The relatively large size of the representation means that the victim has reported the incident with many details. These details can be seen by clicking on any of the flower petals.
                         </h6>
                        
@@ -248,13 +252,14 @@
                               Hover anywhere on an incident (circle or flower) to see the key details.
                            </li>
                            </li>
-                           <li>Use the grey buttons at the top of the visualization to group the visualization by victim discipline, victim rank, harasser rank, harasser type, and institute type. </li>
+                           <li>Use the grey buttons at the top of the visualization to group the visualization by victim field of study, victim rank, harasser rank, harasser type, and institute type. </li>
                            <li>To reset the visualization, click on the Reset button at the top of the visualization. </li>
                            <li style="margin-bottom:0">Click the <img src= "image/about.png" alt="?" width = "23px"/> button in the top-right corner of the interface to access this information again.</li>
                         </ul>
                      </div>
                   </div>
                   <div class="modal-footer">
+                     <span class="important">Apply what you just learned to answer the visualization-related questions you'll be seeing next.</span>
                      <button type="button" class="btn btn-secondary" data-dismiss="modal">View Visualization</button>
                   </div>
                </div>
@@ -272,10 +277,10 @@
                   </div>
                   <div class="modal-body">
                      <p>Let's continue exploring the visualization. Please spend <strong> a few minutes </strong> interacting with the  visualization in any way you like. 
-                        Keep typing your findings in the text box below the visualization side by side. Let us know what you learn or what interesting pattern you discover while interacting with the visualization.
+                        <span class="important">Write your findings in the text box below the visualization side by side with your exploration.</span> 
                         Let us know what you learn or what interesting pattern you discover while interacting with the visualization.
                      </p>
-                     <p>Remember that you can compare reported incidents of sexual harassment by grouping the incidents based on <strong> academic disciplines, institute types, Victim Rank, Harasser Rank, 
+                     <p>Remember that you can compare reported incidents of sexual harassment by grouping the incidents based on <strong> victim field of study, victim institute type, Victim Rank, Harasser Rank, 
                         and Harasser gender </strong> using the gray buttons at the top. You can also click on an incident (circle or flower) to view the details of the reported incident on the left-hand-side panel of the visualization.
                      </p>
                      <p>To access the explanations on how to read and interact with the visualization, please click on the <img src= "image/about.png" width = "23px" alt="?"/>   button in the top-right corner of the interface. 

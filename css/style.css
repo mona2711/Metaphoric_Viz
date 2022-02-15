@@ -58,7 +58,7 @@
 #Part_A_forms,
 #part-B-container,
 #part-c-forms {
-	border: 1px solid #E0E0E0;
+	/* border: 1px solid #E0E0E0; */
 	margin-bottom: 20px;
 	min-height: 200px;
 	overflow: hidden;
@@ -94,6 +94,7 @@ margin-top:20px;
 
 #viz_fact_learned {
 	width: 100%;
+	border:2px solid #000;
 }
 
 #age_wrapper p,
@@ -154,10 +155,11 @@ svg {
 }
 
 .part_C_form,
-#demographic_form,
+/* #demographic_form, */
 #pre_empathy_form,
 #viz_questions {
 	background: #F5F5F5;
+	border: 1px solid gray;
 }
 
 .form-check-inline {
@@ -225,7 +227,7 @@ input[type=radio] {
 }
 
 #victim_story {
-	height: 588px;
+	height: 556px;
 	padding: 0;
 	border-right: 1px solid lightgrey;
 	overflow: scroll;
@@ -233,7 +235,7 @@ input[type=radio] {
 }
 
 #legend {
-	height: 588px;
+	height: 556px;
 	padding: 0;
 	border-left: 1px solid lightgrey;
 }
@@ -340,4 +342,10 @@ div.tooltip {
     border: 0px;		
     border-radius: 8px;			
     pointer-events: none;			
+}
+
+#demographic_ques{
+	overflow:hidden;
+	border: 1px solid #000;
+	background:#F5F5F5;
 }
