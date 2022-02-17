@@ -127,9 +127,9 @@ var flowers = metaphoric_svg.selectAll('g.flower')
         div.transition()		
             .duration(200)		
             .style("opacity", .9);		
-        div.html("<strong>" + "Harasser:"+ "</strong>" + d.perpetrator_new +"</br>" 
+        div.html("<strong>" + "Harasser Rank:"+ "</strong>" + d.perpetrator_new +"</br>" 
         + "<strong>" + "Harraser Gender:" + "</strong>" +d.gendersquash + "</br>" 
-        + "<strong>" + "Victim:" + "</strong>" + d.cleantarget_new + "</br>" 
+        + "<strong>" + "Victim Rank:" + "</strong>" + d.cleantarget_new + "</br>" 
         + "<strong>" + "Victim's Field of study:" + "</strong>" + d.cleandiscipline + "</br>" 
         + "<strong>" + "Victim's Institute Type: " + "</strong>" + d.itype )	
             .style("left", (d3.event.pageX) + "px")		
@@ -384,7 +384,7 @@ function showTitles(byVar, scale) {
         .merge(titles)
         .attr('x', function(d) {
             if(d=="Graduate Student"){
-                return "390px";
+                return "555px";
             }
             else if (d == "Undergraduate Student"){
                 return '700px'
@@ -393,7 +393,7 @@ function showTitles(byVar, scale) {
                 return '180px'
             }
             else if(d=="Chair/Dean/Head"){
-                return '555px'
+                return '390px'
             }
             else if (d == "Staff")
             {
