@@ -12,9 +12,9 @@ function make_demographic_form() {
     var discipline_labels = [
         "Humanities (Arts, History, Languages and literature, Law, music, philosophy, religion, theater, journalism)",
         "Social Sciences (Anthropology, Economics, Geography, Political science, Psychology, Sociology)",
-        "Natural Sciences (Biology, Chemistry, Space science, Earth science, physics)",
-        "Formal Sciences (Computer Science, Mathematics)",
-        "Applied Science (Economics, Engineering and technology, Medicine and health, Agriculture)",
+        "Natural Sciences (Biology, physics, Chemistry, Space science, Earth science, life sciences)",
+        "Formal Sciences (Computer Science, Mathematics, Statistics, Information science)",
+        "Applied Science (Business, Engineering and technology, Medicine and health, Architecture, Agriculture)",
         "Prefer not to answer"
     ]
 
@@ -122,7 +122,7 @@ function make_eng_form() {
                     // value: eng_scale[j - 1],
                     value:j,
                     class: 'form-check-input',
-                    checked: 'true',
+                    // checked: 'true',
                     required: 'true'
                 })
             ).append(
@@ -185,7 +185,7 @@ function make_empathy_form(form, type) {
                     value:j,
                     // value: empathy_scale[j - 1],
                     class: 'form-check-input',
-                    checked: 'checked',
+                    // checked: 'checked',
                     required: 'true'
                 })
             ).append(
