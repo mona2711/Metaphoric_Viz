@@ -10,9 +10,9 @@ function make_demographic_form() {
     var education_options = ["Undergraduate", "Masters", "PhD", "Postdoctoral", "Prefer not to answer"];
     var discipline_value = ["Humanities", "Social Sciences", "Natural Sciences", "Formal Sciences", "Applied Science", "Prefer not to answer"];
     var discipline_labels = [
-        "Humanities (Arts, History, Languages and literature, Law, music, philosophy, religion, theater, journalism)",
+        "Humanities (Arts, History, Languages and literature, Law, Music, Philosophy, Religion, Theater, Journalism)",
         "Social Sciences (Anthropology, Economics, Geography, Political science, Psychology, Sociology)",
-        "Natural Sciences (Biology, physics, Chemistry, Space science, Earth science, life sciences)",
+        "Natural Sciences (Biology, physics, Chemistry, Space science, Earth science, Life sciences)",
         "Formal Sciences (Computer Science, Mathematics, Statistics, Information science)",
         "Applied Science (Business, Engineering and technology, Medicine and health, Architecture, Agriculture)",
         "Prefer not to answer"
