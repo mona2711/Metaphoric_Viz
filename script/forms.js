@@ -146,7 +146,7 @@ function make_empathy_form(form, type) {
         "The suffering of others deeply disturbs me.",
         "I always try to tune in to the feelings of those around me.",
         "I get very upset when I see a young child who is being treated meanly.",
-        "The suffering of animals or pets is over-emphasized.",
+        "Too much is made of the suffering of pets or animals.",
         "If someone is upset, I get upset too.",
         "When I am with other people who are laughing, I join in.",
         "It makes me mad to see someone treated unjustly.",

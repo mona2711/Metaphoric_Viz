@@ -17,7 +17,7 @@ var metaphoric_svg = d3.select("#metaphoric_viz").append("svg")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
-.attr("transform", "translate(10,-50)");
+.attr("transform", "translate(35,-50)");
 
 var V_story_svg = d3.select("#victim_story").append("svg")
 .attr("width", 0)
@@ -187,7 +187,8 @@ var perp = flowers.append("circle")
 
 flowers.selectAll('path')
     .data(function(d) {
-        var numPetals = Math.floor(Math.random() * (8 - 5 + 1) + 5);
+        var numPetals = Math.floor(Math.random() * (8 - 5) + 5);
+
         if (d.cleandiscipline_new == 'Humanities') {
             var path = petalPaths[0]
         } else if (d.cleandiscipline_new == 'Social sciences') {
@@ -197,10 +198,10 @@ flowers.selectAll('path')
             var path = petalPaths[6]
 
         } else if (d.cleandiscipline_new == 'Formal sciences') {
-            var path = petalPaths[2]
+            var path = petalPaths[8] //8
 
         } else if (d.cleandiscipline_new == 'Applied science') {
-            var path = petalPaths[1]
+            var path = petalPaths[3] //1
 
         }
         var Tcolor = colors_scale(d.cleantarget_new)
@@ -235,15 +236,27 @@ flowers.selectAll('path')
     
    
 var stories_clicked = [];
+var stories_clicked_pre = [];
+
 // function to select and deselect story
 function animate(d, selected_flower) {
         tip.show(d);
         if ($('#story_clicked_ids').val() == " ") {
             stories_clicked.length = 0;
         }
+        if ($('#story_clicked_ids_pre').val() == " ") {
+            stories_clicked_pre.length = 0;
+        }
         stories_clicked.push(d.id)
         $('#story_clicked_ids').val(stories_clicked);
         $('#no_story_clicked').val((Number($('#no_story_clicked').val()) + 1))
+
+        stories_clicked_pre.push(d.id)
+        $('#story_clicked_ids_pre').val(stories_clicked_pre);
+        $('#no_story_clicked_pre').val((Number($('#no_story_clicked_pre').val()) + 1))
+        
+
+
         d3.selectAll('.selected').classed('selected', false)
         d3.select(selected_flower).classed("selected", true)
         d3.selectAll('.flower').style('opacity', .2)

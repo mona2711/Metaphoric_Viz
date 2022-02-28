@@ -222,8 +222,10 @@ input[type=radio] {
 }
 
 #legend {
-	border-left: 1px solid lightgrey;
+	/* border-left: 1px solid lightgrey; */
 	width: 14.666667% !important;
+	height: 556px;
+	padding: 0;
 }
 
 #victim_story {
@@ -233,13 +235,6 @@ input[type=radio] {
 	overflow: scroll;
 	overflow-x: hidden;
 }
-
-#legend {
-	height: 556px;
-	padding: 0;
-	border-left: 1px solid lightgrey;
-}
-
 
 .rest button {
 	width: 80px !important;

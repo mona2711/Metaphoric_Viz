@@ -26,10 +26,15 @@ $(function() {
     });
 
     //variables needed to send data to respective sheet in spreadsheet
-    const scriptURL_A = 'https://script.google.com/macros/s/AKfycbzl8Z6Uaj9Xkuj3aWsdwAiSupyx4fOvhRW41rVCwzLohc9hezUk4ukeGzYoFd7Au2E/exec'
-    const scriptURL_B0 = 'https://script.google.com/macros/s/AKfycbyFw3erx9FCGqHU3zSdEgu8fxTcP7fe7GgQLnVe-EvGouChGn44I0VueJIIl-F70VM/exec'
-    const scriptURL_B1 = 'https://script.google.com/macros/s/AKfycbwanBIstMHl7QfwEJ7DomaW7qnVg-A6DWrNvy2TKvJFs7hNFNfUKPEFrhi3iXET2Q/exec'
-    const scriptURL_C = 'https://script.google.com/macros/s/AKfycbxjoLf8R0Rvkdkm-cBi4L6ljgUnEtQmmvRZuSpLdq4oUZaWX3Sz9DS1Tjk_YTSKEro/exec'
+    // const scriptURL_A = 'https://script.google.com/macros/s/AKfycbzl8Z6Uaj9Xkuj3aWsdwAiSupyx4fOvhRW41rVCwzLohc9hezUk4ukeGzYoFd7Au2E/exec'
+    // const scriptURL_B0 = 'https://script.google.com/macros/s/AKfycbyFw3erx9FCGqHU3zSdEgu8fxTcP7fe7GgQLnVe-EvGouChGn44I0VueJIIl-F70VM/exec'
+    // const scriptURL_B1 = 'https://script.google.com/macros/s/AKfycbwanBIstMHl7QfwEJ7DomaW7qnVg-A6DWrNvy2TKvJFs7hNFNfUKPEFrhi3iXET2Q/exec'
+    // const scriptURL_C = 'https://script.google.com/macros/s/AKfycbxjoLf8R0Rvkdkm-cBi4L6ljgUnEtQmmvRZuSpLdq4oUZaWX3Sz9DS1Tjk_YTSKEro/exec'
+
+    const scriptURL_A = 'https://script.google.com/macros/s/AKfycbwjXm7OBY-YJBlPTmbIgJ_hDqzV4l2jUm8-iJEOWt0NaRHhnxfK2_iq-s4Rht3_p-1wjQ/exec'
+    const scriptURL_B0 = 'https://script.google.com/macros/s/AKfycby3v1hGY38uogHA9cEgT_Db_mJUxXPbE_PowtvWWT8tRWfpLQpIPiplk7GILJPfy8DKkg/exec'
+    const scriptURL_B1 = 'https://script.google.com/macros/s/AKfycbz3n3Q-URx4qTJWtughLybwiKlFPj274Nrv_cts50sYH3pAU1pIxY5a2CixefHsm90d/exec'
+    const scriptURL_C = 'https://script.google.com/macros/s/AKfycbxiuCHSTvAMz5P6RTCeh1vFDGOd45xE1vAFPeyvd21QOvG04dDR1H_mfgq8C1JnQnLJVA/exec'
   
 	const form_A = document.forms['submit-to-google-sheet_A']
     const form_B0 = document.forms['submit-to-google-sheet_B0']
@@ -65,7 +70,7 @@ $(function() {
             if (SheetName == 'Study_Part_B_interactions') {
                 var val = form.elements.viz_fact_learned.value;
                 // if (/^\s*$/g.test(val) || val.indexOf('\n') != -1) {
-                    if(val.trim().length < 10){
+                    if(val.trim().length < 1){
                     isFormValid = false;
                     $(error).show()
                 }
@@ -101,8 +106,8 @@ $(function() {
                         method: 'POST',
                         body: new FormData(form)
                     })
-                    .then(response => console.log('Success!', response))
-                    .catch(error => console.error('Error!', error.message))
+                    // .then(response => console.log('Success!', response))
+                    // .catch(error => console.error('Error!', error.message))
                 $(hide_Comp).hide()
                 $(show_Comp).show()
 

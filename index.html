@@ -67,7 +67,12 @@
          <!--.................Part B code starts...............-->
          <div id="part-B-container">
             <div id="victim_story" class="col-md-2 tool-tip">
-               <h5 class="text-center" style="font-weight:bold;">Victim Story</h5>
+
+               <div class="text-center">
+               <h5 class="" style="font-weight:bold;margin-bottom:8px;display:inline-block">Victim Story</h5>
+               <span style="padding:0;font-size:12px;" class="text-center">(Click on an incident)</span>
+               </div>
+
             </div>
             <div id="metaphoric_viz" class="col-md-8 svg-container">
                <div id="BtnContainer">
@@ -89,7 +94,7 @@
                <div class="align_center">
                   <h5 style="display:inline-block;font-weight:bold;" class="align-center;">How to Read it</h5>
                   <button type="button" class="about-button" data-toggle="modal" data-target="#overview-modal"> ? </button>
-                  <img class="legend_img" src="image/m_legend.svg" alt="legend" width="" height="520px" />
+                  <img class="legend_img" src="image/Legend1.svg" alt="legend" width="" height="520px" />
                </div>
             </div>
             <form action="" id="viz_tasks" name="submit-to-google-sheet_B0">
@@ -99,6 +104,14 @@
                   <input type="hidden" id="timestamp_B_0_entry" name="Timestamp_A" />
                   <input type="hidden" id="timestamp_B_0" name="Timestamp_B" />
                   <input type="hidden" id="pid_B" name="Prolofic_id" required />
+               <input type="hidden" id="no_story_clicked_pre" name="story_clicks" />
+               <input type="hidden" id="story_clicked_ids_pre" name="clicked_story_ids" />
+               <input type="hidden" id="victim_status_clicks_pre" name="victim_status_clicks" />
+               <input type="hidden" id="harasser_status_clicks_pre" name="harasser_status_clicks" />
+               <input type="hidden" id="h_gender_clicks_pre" name="h_gender_clicks" />
+               <input type="hidden" id="itype_clicks_pre" name="itype_clicks" />
+               <input type="hidden" id="discipline_clicks_pre" name="discipline_clicks" />
+               <input type="hidden" id="reset_clicks_pre" name="reset_clicks" />
                   <ol>
                      <li>
                         <p>What is the <strong>rank of the victim</strong> reporting the majority of sexual harassment incidents? </p>
@@ -298,22 +311,34 @@
          function count_clicks(id) {
            switch (id) {
              case 'cleantarget_new':
-               $('#victim_status_clicks').val((Number($('#victim_status_clicks').val()) + 1))
+             $('#victim_status_clicks_pre').val((Number($('#victim_status_clicks').val()) + 1))
+             $('#victim_status_clicks').val((Number($('#victim_status_clicks').val()) + 1))
                break;
+
              case 'perpetrator_new':
-               $('#harasser_status_clicks').val((Number($('#harasser_status_clicks').val()) + 1))
+             $('#harasser_status_clicks_pre').val((Number($('#harasser_status_clicks').val()) + 1))
+             $('#harasser_status_clicks').val((Number($('#harasser_status_clicks').val()) + 1))
                break;
+
              case 'gendersquash':
-               $('#h_gender_clicks').val((Number($('#h_gender_clicks').val()) + 1))
+             $('#h_gender_clicks_pre').val((Number($('#h_gender_clicks').val()) + 1))
+             $('#h_gender_clicks').val((Number($('#h_gender_clicks').val()) + 1))
                break;
+
              case 'itype':
-               $('#itype_clicks').val((Number($('#itype_clicks').val()) + 1))
+             $('#itype_clicks_pre').val((Number($('#h_gender_clicks').val()) + 1))
+             $('#itype_clicks').val((Number($('#h_gender_clicks').val()) + 1))
                break;
+
              case 'cleandiscipline_new':
-               $('#discipline_clicks').val((Number($('#discipline_clicks').val()) + 1))
+             $('#discipline_clicks_pre').val((Number($('#discipline_clicks').val()) + 1))
+             $('#discipline_clicks').val((Number($('#discipline_clicks').val()) + 1))
                break;
+
              case 'all':
-               $('#reset_clicks').val((Number($('#reset_clicks').val()) + 1))
+             $('#reset_clicks_pre').val((Number($('#reset_clicks').val()) + 1))
+             $('#reset_clicks').val((Number($('#reset_clicks').val()) + 1))
+
          $('#d3-tip span').remove();
          d3.selectAll('.flower').style('opacity', 1);
                break;
