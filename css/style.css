@@ -141,7 +141,11 @@ svg {
 	color: #fff;
 }
 
-#part-B-container,
+/* #part-B-container,
+#part-C-container {
+	display: none;
+} */
+#part-A-container,
 #part-C-container {
 	display: none;
 }
